@@ -1,87 +1,97 @@
-# AI & Deep Learning Credit Card Fraud Detection  
+# 💳 **Credit Card Fraud Detection Using Deep Learning** 🛡️
 
-## 📌 Overview  
-This project leverages **AI and Deep Learning** techniques to detect fraudulent credit card transactions. Using an **LSTM-based neural network**, the model analyzes transaction patterns, while **SMOTE (Synthetic Minority Over-sampling Technique)** handles class imbalance to improve fraud detection accuracy. The model achieves an accuracy of **99.7%**, ensuring highly reliable fraud detection.  
+## 🌟 **Overview**
+Credit card fraud poses significant challenges to financial institutions and consumers. This project employs a **Long Short-Term Memory (LSTM) neural network** to detect fraudulent transactions, achieving an impressive **99.7% accuracy**. By addressing class imbalance with **Synthetic Minority Over-sampling Technique (SMOTE)** and leveraging **Principal Component Analysis (PCA)** for feature engineering, the model ensures robust and reliable fraud detection.
 
-## 📊 Dataset  
-The dataset used is the **Credit Card Fraud Detection Dataset** from [Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud).  
-- Contains **284,807 transactions** with only **492 fraudulent cases** (highly imbalanced).  
-- Features include **V1-V28 (PCA-transformed features)**, **Amount**, **Time**, and **Class (0 = Legitimate, 1 = Fraudulent)**.  
+## 📊 **Dataset**
+- **Source:** [Kaggle Credit Card Fraud Detection Dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud)
+- **Transactions:** 284,807
+- **Fraudulent Cases:** 492 (highly imbalanced)
+- **Features:**
+  - `V1` to `V28`: PCA-transformed features
+  - `Time`: Seconds elapsed between this transaction and the first transaction
+  - `Amount`: Transaction amount
+  - `Class`: Target variable (0 = Legitimate, 1 = Fraudulent)
 
-## 🛠 Technologies Used  
-- **Programming Language:** Python  
-- **Libraries:** TensorFlow/Keras, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
-- **Deep Learning Model:** Long Short-Term Memory (LSTM)  
-- **Imbalance Handling:** SMOTE for synthetic data generation  
+## 🛠️ **Technologies Used**
+- **Programming Language:** Python
+- **Libraries:** TensorFlow, Keras, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- **Machine Learning Techniques:**
+  - **LSTM Neural Network:** Captures temporal dependencies in transaction data
+  - **SMOTE:** Addresses class imbalance by oversampling the minority class
+  - **PCA:** Reduces dimensionality and noise in the dataset
 
-## 🔄 Project Workflow  
-### **1️⃣ Data Preprocessing**  
-✔ Handling missing values  
-✔ Feature scaling & normalization  
-✔ Addressing class imbalance using **SMOTE**  
+## 🔄 **Project Workflow**
+1. **Data Preprocessing:**
+   - Handle missing values (if any)
+   - Normalize features (`StandardScaler`) to ensure consistent scaling
+   - Apply **PCA** to transform features and reduce dimensionality
 
-### **2️⃣ Exploratory Data Analysis (EDA)**  
-✔ Visualizing fraud vs legitimate transactions  
-✔ Feature correlation analysis using heatmaps  
+2. **Handling Class Imbalance:**
+   - Utilize **SMOTE** to oversample fraudulent transactions, balancing the dataset
 
-### **3️⃣ Model Training & Evaluation**  
-✔ Splitting dataset into **train-test sets (80-20)**  
-✔ Training an **LSTM model** for fraud detection  
-✔ Evaluating performance using accuracy, precision, recall, and F1-score  
+3. **Model Development:**
+   - Construct an **LSTM-based neural network** to model sequential transaction data
+   - Compile the model with appropriate loss functions and optimizers
 
-### **4️⃣ Performance Metrics**  
-✔ **Accuracy:** 99.7%  
-✔ **Precision:** High precision ensures minimal false positives  
-✔ **Recall:** Effectively detects fraudulent cases  
-✔ **ROC-AUC Score:** 0.99, indicating a highly reliable model  
+4. **Model Training & Evaluation:**
+   - Train the LSTM model on the balanced dataset
+   - Evaluate performance using metrics: **Accuracy, Precision, Recall, F1-Score, ROC-AUC Curve**
 
-## 🎯 Results  
-- The **LSTM-based model achieved 99.7% accuracy** in fraud detection.  
-- **SMOTE significantly improved class balance**, enhancing fraud detection recall.  
-- **Feature correlation analysis helped identify key fraud indicators.**  
+5. **Performance Metrics:**
+   - Achieved **99.7% accuracy**
+   - High **Precision** and **Recall** indicating effective fraud detection
+   - **ROC-AUC Score:** 0.998, demonstrating excellent model performance
 
-## 🚀 How to Run the Project  
-1️⃣ **Clone the repository:**  
-```bash
-git clone https://github.com/yourusername/credit-card-fraud-detection.git
+## 🚀 **How to Run the Project**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/16sumanshiroy/CARD-FRAUD-DETECTION.git
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd CARD-FRAUD-DETECTION
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run the Jupyter Notebook:**
+   ```bash
+   jupyter notebook CREDIT_CARD_FRAUD_DETECTION.ipynb
+   ```
 
-2️⃣ **Navigate to the project directory:**
+## 📈 **Results & Insights**
+- The **LSTM model** effectively captures temporal patterns in transaction data, leading to high accuracy
+- **SMOTE** successfully mitigates class imbalance, enhancing the model's ability to detect fraud
+- **PCA** reduces noise, improving model performance and training efficiency
+![download-1](https://github.com/user-attachments/assets/32671bd0-e8b3-482a-8366-7e32e73ce75e)
 
-bash
-Copy
-Edit
-cd credit-card-fraud-detection
 
-3️⃣ **Install dependencies:**
+## 🌐 **Deployment**
+- Deploy the trained model using **Flask** to create a RESTful API for real-time fraud detection
+- Integrate the API into existing financial transaction systems for continuous monitoring
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
+## 🔮 **Future Improvements**
+- Explore **Convolutional Neural Networks (CNNs)** for feature extraction
+- Implement **Ensemble Learning** techniques to combine multiple models for improved accuracy
+- Develop a **real-time streaming pipeline** using tools like **Apache Kafka** for immediate fraud detection
+- Incorporate additional features such as **geolocation data** and **transaction metadata** to enhance model robustness
 
-4️⃣ **Run the Jupyter Notebook or Python script:**
+## 🤝 **Contributions**
+Contributions are welcome! Feel free to **fork** this repository, create **feature branches**, and submit **pull requests**. Any suggestions or issues can be reported in the **Issues** section.
 
-bash
-Copy
-Edit
-jupyter notebook  
-# or  
-python fraud_detection.py
+## 📜 **License**
+This project is licensed under the **MIT License**.
 
-## 🔮 Future Improvements
-✔ Implement Transformer-based models for better sequence learning
-✔ Integrate Autoencoder-based Anomaly Detection alongside LSTM
-✔ Deploy the model using Flask or FastAPI for real-time fraud detection
+---
 
-## 🤝 Contributions
-Feel free to fork this repository, create feature branches, and submit pull requests (PRs). Any contributions, issues, or suggestions are welcome!
+**📬 Connect with me:**
+- **Email:** 16sumanshiroy@gmail.com
+- **LinkedIn:** [Sumanshi Roy](https://linkedin.com/in/sumanshi-roy-435229230)
+- **GitHub:** [16sumanshiroy](https://github.com/16sumanshiroy)
 
-## 📄 License
-This project is open-source under the MIT License.
+---
 
-## 📌 Connect with Me
-📧 Email: 16sumanshiroy@gmail.com
-🔗 LinkedIn: Sumanshi Roy
-🐍 GitHub: 16sumanshiroy
+**🚀 Happy Coding!** 😊
 
-🚀 Happy Coding! 😊
