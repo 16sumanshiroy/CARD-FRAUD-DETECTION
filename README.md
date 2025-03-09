@@ -44,9 +44,8 @@ LSTM achieves high accuracy (~99.9%) while maintaining good recall on fraud case
 SMOTE effectively balances class distribution, improving fraud detection performance.
 Feature correlation heatmap visualizes relationships between variables.
 
-![download (1)](https://github.com/user-attachments/assets/6e955172-9a10-4506-bacd-9818d3004172)
-![download (2)](https://github.com/user-attachments/assets/70205b96-91e6-4537-b3de-1aa196a3f6fc)
-![download (3)](https://github.com/user-attachments/assets/5babf664-e757-44a6-925f-fe1a8ff38400)
+![download-1](https://github.com/user-attachments/assets/63cf56cb-a981-4d4f-9001-f89b4d5292df)
+
 
 
 
