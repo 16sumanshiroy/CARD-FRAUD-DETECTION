@@ -39,7 +39,7 @@ Copy
 Edit
 python src/main.py
 
-📈 Results
+##📈 Results
 LSTM achieves high accuracy (~99.9%) while maintaining good recall on fraud cases.
 SMOTE effectively balances class distribution, improving fraud detection performance.
 Feature correlation heatmap visualizes relationships between variables.
@@ -49,14 +49,14 @@ Feature correlation heatmap visualizes relationships between variables.
 
 
 
-🤖 Future Improvements
+##🤖 Future Improvements
 Experiment with Transformer-based models for enhanced fraud detection.
 Combine LSTM with anomaly detection techniques for hybrid detection.
 Deploy the model using Flask or FastAPI for real-time fraud detection.
 📄 License
 This project is open-source under the MIT License.
 
-📌 Connect with me:
+##📌 Connect with me:
 📧 Email: 16sumanshiroy@gmail.com
 🔗 LinkedIn: Sumanshi Roy
 🐍 GitHub: 16sumanshiroy
