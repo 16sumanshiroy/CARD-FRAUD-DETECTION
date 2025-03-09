@@ -56,3 +56,11 @@ Combine LSTM with anomaly detection techniques for hybrid detection.
 Deploy the model using Flask or FastAPI for real-time fraud detection.
 📄 License
 This project is open-source under the MIT License.
+
+📌 Connect with me:
+📧 Email: 16sumanshiroy@gmail.com
+🔗 LinkedIn: Sumanshi Roy
+🐍 GitHub: 16sumanshiroy
+
+🚀 Happy Coding!
+
